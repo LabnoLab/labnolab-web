@@ -1,0 +1,39 @@
+import imgMentorias from "@/assets/service-mentorias.jpg";
+import imgConsultoria from "@/assets/service-consultoria.jpg";
+import imgHackathons from "@/assets/service-hackathons.jpg";
+import imgFormacion from "@/assets/service-formacion.jpg";
+import imgWorkshops from "@/assets/service-workshops.jpg";
+import imgCapacitacion from "@/assets/service-capacitacion.jpg";
+
+const services = [
+  { name: "Mentorías", description: "Acompañamiento one-to-one para emprendedoras/es que buscan potenciar su proyecto colaborando con la Inteligencia Artificial.", image: imgMentorias },
+  { name: "Consultoría", description: "Transformación integral de procesos y creación de soluciones de IA on-demand, automatizaciones y mejora de la productividad que amplifican el potencial humano sin reemplazarlo.", image: imgConsultoria },
+  { name: "Hackathons", description: "Jornadas creativas de co-creación donde colaboramos con la IA para resolver desafíos complejos y generar innovación disruptiva sobre retos concretos de equipos u organizaciones.", image: imgHackathons },
+  { name: "Formación", description: "Cursos completos para trabajar las 6 fases de la Metodología LabnoLab: pensar, interactuar, investigar, innovar, comunicar y analizar en clave de IA orientados y adaptados a diferentes perfiles profesionales.", image: imgFormacion },
+  { name: "Workshops", description: "Sesiones inmersivas de 2-4 horas donde desbloqueamos el pensamiento en clave de IA, colaborando con ella en ejemplos concretos de un proyecto o reto.", image: imgWorkshops },
+  { name: "Capacitación", description: "Adaptamos nuestra metodología para crear programas formativos a medida para equipos con necesidades específicas, integrando la IA en sus flujos de trabajo sin que pierdan su identidad.", image: imgCapacitacion },
+];
+
+export default function Services() {
+  return (
+    <section id="servicios" className="border-t border-border bg-background py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="mb-10 text-3xl font-extrabold tracking-tight sm:text-4xl">¿QUÉ HACEMOS?</h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((s) => (
+            <article key={s.name} className="group flex flex-col overflow-hidden rounded-lg border-2 border-border bg-background shadow-[var(--shadow-elevated)] transition-transform hover:-translate-y-1">
+              <img src={s.image} alt={`${s.name} — imagen en blanco y negro`} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+              <div className="flex flex-col gap-2 p-6">
+                <div className="flex items-center gap-3">
+                  <span className="inline-block h-4 w-6 bg-primary"></span>
+                  <h3 className="text-2xl font-extrabold italic tracking-tight">{s.name}</h3>
+                </div>
+                <p className="text-foreground/90">{s.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
