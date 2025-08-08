@@ -63,10 +63,10 @@ export default function Hero() {
             />
           ))}
 
-          {/* Overlay text (decorative) */}
+          {/* Overlay text */}
           <div className="pointer-events-none absolute inset-0 grid place-items-center">
-            <span aria-hidden className="text-on-image text-center italic font-semibold text-[clamp(2rem,4vw,3.5rem)]">
-              PERSONAS + CREATIVIDAD + IMPACTO + IA
+            <span aria-hidden className="text-on-image text-center italic font-semibold leading-[0.9] text-[clamp(2.5rem,6vw,6rem)]">
+              INTELIGENCIA CREATIVA
             </span>
           </div>
 
