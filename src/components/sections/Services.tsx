@@ -11,8 +11,8 @@ const services = [
 export default function Services() {
   return (
     <section id="servicios" className="border-t border-border bg-background py-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-10 text-3xl font-extrabold tracking-tight sm:text-4xl">¿QUÉ HACEMOS?</h2>
+      <div className="pad-x-fluid">
+        <h2 className="mb-10 font-extrabold tracking-tight text-[clamp(2rem,4.5vw,4rem)]">¿QUÉ HACEMOS?</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <article key={s.name} className="group flex flex-col overflow-hidden rounded-lg border-2 border-border bg-background shadow-[var(--shadow-elevated)] transition-transform hover:-translate-y-1">

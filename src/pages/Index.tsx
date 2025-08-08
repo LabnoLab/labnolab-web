@@ -16,7 +16,7 @@ const Index = () => {
         <Services />
       </main>
       <footer className="border-t border-border bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="pad-x-fluid">
           <div className="grid grid-cols-1 divide-y divide-border sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4">
             <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6">
               <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">

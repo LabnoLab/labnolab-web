@@ -108,10 +108,11 @@
   .hover-scale:hover { transform: translateY(-2px) scale(1.02); }
 
   /* Fluid typography & spacing */
-  .fluid-h1 { font-size: clamp(2.5rem, 5vw, 5rem); }
-  .fluid-body { font-size: clamp(1rem, 1.6vw, 1.5rem); }
-  .btn-fluid { padding: clamp(0.75rem, 1.2vw, 1rem) clamp(1.25rem, 2vw, 2rem); font-size: clamp(1rem, 1.3vw, 1.125rem); border-radius: var(--radius); }
-  .pad-5vw { padding: clamp(16px, 5vw, 64px); }
+  .fluid-h1 { font-size: clamp(3rem, 7vw, 7rem); }
+  .fluid-body { font-size: clamp(1.0625rem, 1.8vw, 1.75rem); line-height: 1.6; }
+  .btn-fluid { padding: clamp(0.9rem, 1.6vw, 1.25rem) clamp(1.5rem, 2.5vw, 2.5rem); font-size: clamp(1rem, 1.5vw, 1.25rem); border-radius: var(--radius); }
+  .pad-5vw { padding: clamp(12px, 3vw, 40px); }
+  .pad-x-fluid { padding-left: clamp(12px, 3vw, 48px); padding-right: clamp(12px, 3vw, 48px); }
 }
 
 /* Marquee banner */

@@ -10,7 +10,7 @@ const items = [
 export default function ContactBar() {
   return (
     <aside aria-label="Barra de contacto" className="border-t border-b border-border bg-background">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-4 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:px-8">
+      <div className="grid grid-cols-1 divide-y divide-border pad-x-fluid sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4">
         {items.map(({ icon: Icon, text, href }) => (
           <a
             key={text}
