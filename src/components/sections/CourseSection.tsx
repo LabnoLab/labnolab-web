@@ -1,11 +1,11 @@
-import courseImg from "@/assets/course-ecia.jpg";
+// Image provided externally via /lovable-uploads
 import { Button } from "@/components/ui/button";
 import { Smile, MessageCircle, Download } from "lucide-react";
 
 export default function CourseSection() {
   return (
     <section id="academy" className="border-t border-border bg-background py-14">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-0 px-4 sm:px-6 lg:grid-cols-2 lg:px-8 lg:min-h-[70vh]">
         <div className="order-2 lg:order-1">
           <div className="mb-4 inline-flex items-center gap-3">
             <span className="inline-block h-6 w-8 bg-primary"></span>
@@ -23,8 +23,8 @@ export default function CourseSection() {
             <Button size="lg" className="hover-scale"><Download /> DESCARGA EL DOSIER</Button>
           </div>
         </div>
-        <div className="order-1 lg:order-2">
-          <img src={courseImg} alt="Manos utilizando un smartphone sobre escritorio, blanco y negro" loading="lazy" className="w-full rounded-lg border-2 border-border shadow-[var(--shadow-elevated)]" />
+        <div className="order-1 lg:order-2 relative min-h-[40vh] lg:min-h-[70vh]">
+          <img src="/lovable-uploads/85bf3b27-094c-4788-9339-f0a29eff805c.png" alt="Smiley neon LabnoLab" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
     </section>
