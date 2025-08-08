@@ -1,14 +1,14 @@
 import React from "react";
 
-const TEXT = "PERSONAS + CREATIVIDAD + IMPACTO + IA";
+const TEXT = "(Personas + Creatividad + Impacto)^IA = Inteligencia Creativa";
 
 export default function MovingBanner() {
   return (
-    <section aria-label="Personas Creatividad Impacto IA" className="border-t border-b border-border bg-primary text-primary-foreground">
+    <section aria-label="Personas Creatividad Impacto IA" className="border-t border-b border-border bg-primary text-accent">
       <div className="marquee">
-        <div className="marquee-track py-3 sm:py-4">
+        <div className="marquee-track reverse py-3 sm:py-4">
           {Array.from({ length: 12 }).map((_, i) => (
-            <span key={i} className="mx-6 text-sm font-extrabold uppercase tracking-widest sm:text-base">
+            <span key={i} className="mx-6 italic font-semibold tracking-tight text-[clamp(1.5rem,4vw,3rem)]">
               {TEXT}
             </span>
           ))}

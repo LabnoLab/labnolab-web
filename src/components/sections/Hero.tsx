@@ -63,12 +63,6 @@ export default function Hero() {
             />
           ))}
 
-          {/* Overlay text */}
-          <div className="pointer-events-none absolute inset-0 grid place-items-center">
-            <span aria-hidden className="text-on-image text-center italic font-semibold leading-[0.9] text-[clamp(2.5rem,6vw,6rem)]">
-              INTELIGENCIA CREATIVA
-            </span>
-          </div>
 
           {/* Dots */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
