@@ -23,26 +23,26 @@ export default function Hero() {
 
   return (
     <section id="home" className="bg-background">
-      <div className="grid min-h-[75vh] lg:min-h-[95vh] grid-cols-1 lg:grid-cols-2">
+      <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         {/* Left: text + CTAs */}
         <div className="flex items-center">
-          <div className="w-full px-4 py-10 sm:px-6 lg:px-10">
+          <div className="w-full pad-5vw">
             <div className="animate-enter">
               <p className="mb-3 inline-block rounded-sm bg-primary px-2 py-1 text-sm font-semibold text-primary-foreground">Laboratorio de Inteligencia Creativa</p>
-              <h1 className="mb-6 text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight">
+              <h1 className="mb-6 font-extrabold leading-[0.95] tracking-tight fluid-h1">
                 LABORATORIO DE INTELIGENCIA CREATIVA
               </h1>
-              <p className="mb-10 max-w-2xl text-xl leading-relaxed text-foreground/90">
+              <p className="mb-10 max-w-3xl leading-relaxed text-foreground/90 fluid-body">
                 Eficiencia, productividad y automatización son solo el resultado de colaborar con la Inteligencia Artificial para potenciar a las personas, la creatividad y el impacto.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#servicios">
-                  <Button size="lg" className="hover-scale px-8 py-6 text-lg">
+                  <Button size="lg" className="hover-scale btn-fluid">
                     ¿QUÉ HACEMOS?
                   </Button>
                 </a>
                 <a href="mailto:hola.labnolab@gmail.com">
-                  <Button size="lg" className="hover-scale px-8 py-6 text-lg" variant="default">
+                  <Button size="lg" className="hover-scale btn-fluid" variant="default">
                     <Mail /> PREGÚNTANOS
                   </Button>
                 </a>
@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
 
         {/* Right: full-height crossfade slider */}
-        <div className="relative min-h-[55vh] lg:min-h-[95vh] overflow-hidden">
+        <div className="relative min-h-screen overflow-hidden">
           {sliderImages.map((src, i) => (
             <img
               key={src}
