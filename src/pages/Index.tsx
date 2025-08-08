@@ -1,8 +1,9 @@
 import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
-import ContactBar from "@/components/sections/ContactBar";
+import MovingBanner from "@/components/sections/MovingBanner";
 import Services from "@/components/sections/Services";
 import CourseSection from "@/components/sections/CourseSection";
+import { Mail, MessageCircle, MapPin, Linkedin } from "lucide-react";
 
 const Index = () => {
   return (
@@ -10,20 +11,42 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <ContactBar />
-        <Services />
+        <MovingBanner />
         <CourseSection />
-        <section id="carrito" className="border-t border-border bg-background py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-2 text-2xl font-bold tracking-tight">Carrito</h2>
-            <p className="text-foreground/80">Próximamente: integraremos compras y reservas.</p>
-          </div>
-        </section>
+        <Services />
       </main>
       <footer className="border-t border-border bg-primary text-primary-foreground">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <p className="text-sm">© {new Date().getFullYear()} LabnoLab — Laboratorio de Inteligencia Creativa</p>
-          <a href="#home" className="story-link">Volver arriba</a>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 divide-y divide-border sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4">
+            <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6">
+              <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">
+                <MessageCircle className="size-5" />
+              </span>
+              <span className="font-semibold underline underline-offset-4">+34615877069</span>
+            </a>
+            <a href="mailto:hola.labnolab@gmail.com" className="flex items-center gap-4 p-6">
+              <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">
+                <Mail className="size-5" />
+              </span>
+              <span className="font-semibold underline underline-offset-4">hola.labnolab@gmail.com</span>
+            </a>
+            <a href="#map" className="flex items-center gap-4 p-6">
+              <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">
+                <MapPin className="size-5" />
+              </span>
+              <span className="font-semibold underline underline-offset-4">Barcelona, Spain.</span>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6">
+              <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">
+                <Linkedin className="size-5" />
+              </span>
+              <span className="font-semibold underline underline-offset-4">LabnoLab Page</span>
+            </a>
+          </div>
+          <div className="flex items-center justify-between py-4">
+            <p className="text-sm">© {new Date().getFullYear()} LabnoLab — Laboratorio de Inteligencia Creativa</p>
+            <a href="#home" className="story-link">Volver arriba</a>
+          </div>
         </div>
       </footer>
     </div>

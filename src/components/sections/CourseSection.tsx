@@ -4,7 +4,7 @@ import { Smile, MessageCircle, Download } from "lucide-react";
 
 export default function CourseSection() {
   return (
-    <section id="academy" className="border-t border-border bg-background py-16">
+    <section id="academy" className="border-t border-border bg-background py-14">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div className="order-2 lg:order-1">
           <div className="mb-4 inline-flex items-center gap-3">
