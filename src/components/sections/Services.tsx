@@ -1,17 +1,11 @@
-import imgMentorias from "@/assets/service-mentorias.jpg";
-import imgConsultoria from "@/assets/service-consultoria.jpg";
-import imgHackathons from "@/assets/service-hackathons.jpg";
-import imgFormacion from "@/assets/service-formacion.jpg";
-import imgWorkshops from "@/assets/service-workshops.jpg";
-import imgCapacitacion from "@/assets/service-capacitacion.jpg";
 
 const services = [
-  { name: "Mentorías", description: "Acompañamiento one-to-one para emprendedoras/es que buscan potenciar su proyecto colaborando con la Inteligencia Artificial.", image: imgMentorias },
-  { name: "Consultoría", description: "Transformación integral de procesos y creación de soluciones de IA on-demand, automatizaciones y mejora de la productividad que amplifican el potencial humano sin reemplazarlo.", image: imgConsultoria },
-  { name: "Hackathons", description: "Jornadas creativas de co-creación donde colaboramos con la IA para resolver desafíos complejos y generar innovación disruptiva sobre retos concretos de equipos u organizaciones.", image: imgHackathons },
-  { name: "Formación", description: "Cursos completos para trabajar las 6 fases de la Metodología LabnoLab: pensar, interactuar, investigar, innovar, comunicar y analizar en clave de IA orientados y adaptados a diferentes perfiles profesionales.", image: imgFormacion },
-  { name: "Workshops", description: "Sesiones inmersivas de 2-4 horas donde desbloqueamos el pensamiento en clave de IA, colaborando con ella en ejemplos concretos de un proyecto o reto.", image: imgWorkshops },
-  { name: "Capacitación", description: "Adaptamos nuestra metodología para crear programas formativos a medida para equipos con necesidades específicas, integrando la IA en sus flujos de trabajo sin que pierdan su identidad.", image: imgCapacitacion },
+  { name: "Mentorías", description: "Acompañamiento one-to-one para emprendedoras/es que buscan potenciar su proyecto colaborando con la Inteligencia Artificial.", image: "/lovable-uploads/c81562c3-800f-4d99-ace4-923ba81f95b0.png" },
+  { name: "Consultoría", description: "Transformación integral de procesos y creación de soluciones de IA on-demand, automatizaciones y mejora de la productividad que amplifican el potencial humano sin reemplazarlo.", image: "/lovable-uploads/9bb135f4-8834-46fd-acea-b387fbbcc5f2.png" },
+  { name: "Hackathons", description: "Jornadas creativas de co-creación donde colaboramos con la IA para resolver desafíos complejos y generar innovación disruptiva sobre retos concretos de equipos u organizaciones.", image: "/lovable-uploads/2aee0e65-9d0d-4a55-8f08-c56c097f2cd9.png" },
+  { name: "Formación", description: "Cursos completos para trabajar las 6 fases de la Metodología LabnoLab: pensar, interactuar, investigar, innovar, comunicar y analizar en clave de IA orientados y adaptados a diferentes perfiles profesionales.", image: "/lovable-uploads/c91014f9-0e9b-4fc7-bdab-753af0555897.png" },
+  { name: "Workshops", description: "Sesiones inmersivas de 2-4 horas donde desbloqueamos el pensamiento en clave de IA, colaborando con ella en ejemplos concretos de un proyecto o reto.", image: "/lovable-uploads/6abd6994-2bd3-4bc1-a64d-b13876790893.png" },
+  { name: "Capacitación", description: "Adaptamos nuestra metodología para crear programas formativos a medida para equipos con necesidades específicas, integrando la IA en sus flujos de trabajo sin que pierdan su identidad.", image: "/lovable-uploads/114454a7-ce2b-472b-a6f5-8ae705e31f42.png" },
 ];
 
 export default function Services() {
