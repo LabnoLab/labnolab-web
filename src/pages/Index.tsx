@@ -3,7 +3,6 @@ import Hero from "@/components/sections/Hero";
 import MovingBanner from "@/components/sections/MovingBanner";
 import Services from "@/components/sections/Services";
 import CourseSection from "@/components/sections/CourseSection";
-import Academy from "@/components/sections/Academy";
 import { Mail, MessageCircle, MapPin, Linkedin } from "lucide-react";
 
 const Index = () => {
@@ -13,7 +12,6 @@ const Index = () => {
       <main>
         <Hero />
         <MovingBanner />
-        <Academy />
         <CourseSection />
         <Services />
       </main>
