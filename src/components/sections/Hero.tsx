@@ -22,14 +22,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="bg-background">
+    <section id="home" className="bg-background isolate">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         {/* Left: text + CTAs */}
-        <div className="flex items-center">
-          <div className="w-full pad-5vw">
+        <div className="flex items-center min-w-0">
+          <div className="relative z-10 w-full pad-5vw">
             <div className="animate-enter">
               <p className="mb-3 inline-block rounded-sm bg-primary px-2 py-1 text-sm font-semibold text-primary-foreground">Laboratorio de Inteligencia Creativa</p>
-              <h1 className="mb-6 font-extrabold leading-[0.95] tracking-tight fluid-h1">
+              <h1 className="mb-6 font-extrabold leading-[0.95] tracking-tight fluid-h1 break-words">
                 LABORATORIO DE INTELIGENCIA CREATIVA
               </h1>
               <p className="mb-10 leading-relaxed text-foreground/90 fluid-body">
@@ -52,7 +52,7 @@ export default function Hero() {
         </div>
 
         {/* Right: full-height crossfade slider */}
-        <div className="relative min-h-screen overflow-hidden">
+        <div className="relative z-0 min-h-screen overflow-hidden">
           {sliderImages.map((src, i) => (
             <img
               key={src}

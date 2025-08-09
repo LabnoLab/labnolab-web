@@ -19,7 +19,7 @@ export default function CourseSection() {
           </p>
           <div className="flex max-w-none flex-col gap-4">
             <Button size="lg" className="hover-scale btn-fluid"><Smile /> APÚNTATE</Button>
-            <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer"><Button size="lg" className="w-full hover-scale btn-fluid"><MessageCircle /> CONTÁCTANOS</Button></a>
+            <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer"><Button size="lg" className="hover-scale btn-fluid"><MessageCircle /> CONTÁCTANOS</Button></a>
             <Button size="lg" className="hover-scale btn-fluid"><Download /> DESCARGA EL DOSIER</Button>
           </div>
         </div>
