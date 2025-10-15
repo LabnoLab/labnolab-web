@@ -2,6 +2,8 @@ import Header from "@/components/layout/Header";
 import { Button } from "@/components/ui/button";
 import { Smile, MessageCircle, Download } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import DossierDownloadDialog from "@/components/forms/DossierDownloadDialog";
+import CourseSignupDialog from "@/components/forms/CourseSignupDialog";
 
 function useCountdown(target: Date) {
   const [now, setNow] = useState<Date>(() => new Date());
@@ -82,6 +84,9 @@ export default function Academy() {
 
   const [current, setCurrent] = useState(0);
   const currentStep = steps[current];
+  
+  const [showDossierDialog, setShowDossierDialog] = useState(false);
+  const [showSignupDialog, setShowSignupDialog] = useState(false);
 
 
   return (
@@ -155,12 +160,14 @@ export default function Academy() {
         <h2 className="text-[clamp(2.25rem,6vw,4.5rem)] font-extrabold leading-tight">¿Estás ready?</h2>
         <p className="mt-3 opacity-90">Súmate al curso y domina las 6 etapas de la Inteligencia Creativa</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <Button size="lg" variant="outline" className="btn-fluid"><Smile /> APÚNTATE</Button>
-          <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" variant="outline" className="btn-fluid"><MessageCircle /> CONTÁCTANOS</Button>
+          <Button size="lg" className="btn-fluid bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setShowSignupDialog(true)}><Smile /> APÚNTATE</Button>
+          <a href="https://wa.me/34615877069/?text=Hola equipo *LabnoLab*! 😎 Estaba navegando por vuestra web y quería pediros el dosier del curso, me lo compartís? Me llamo" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="btn-fluid bg-accent text-accent-foreground hover:bg-accent/90"><MessageCircle /> CONTÁCTANOS</Button>
           </a>
-          <Button size="lg" variant="outline" className="btn-fluid"><Download /> VER DOSIER</Button>
+          <Button size="lg" className="btn-fluid bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setShowDossierDialog(true)}><Download /> VER DOSIER</Button>
         </div>
+        
+        <div className="mt-16 border-t border-white/20" />
       </section>
 
       {/* Footer (same as home) */}
@@ -198,6 +205,9 @@ export default function Academy() {
           </div>
         </div>
       </footer>
+      
+      <DossierDownloadDialog open={showDossierDialog} onOpenChange={setShowDossierDialog} />
+      <CourseSignupDialog open={showSignupDialog} onOpenChange={setShowSignupDialog} />
     </div>
   );
 }
