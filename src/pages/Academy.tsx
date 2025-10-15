@@ -1,9 +1,10 @@
 import Header from "@/components/layout/Header";
 import { Button } from "@/components/ui/button";
-import { Smile, MessageCircle, Download } from "lucide-react";
+import { Smile, MessageCircle, Download, Mail, MapPin, Linkedin } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import DossierDownloadDialog from "@/components/forms/DossierDownloadDialog";
 import CourseSignupDialog from "@/components/forms/CourseSignupDialog";
+import { useToast } from "@/hooks/use-toast";
 
 function useCountdown(target: Date) {
   const [now, setNow] = useState<Date>(() => new Date());
@@ -24,6 +25,7 @@ export default function Academy() {
   useEffect(() => { document.title = "Academy | LabnoLab"; }, []);
   const target = useMemo(() => new Date("2025-12-02T19:00:00"), []);
   const t = useCountdown(target);
+  const { toast } = useToast();
 
   const steps = useMemo(() => ([
     {
@@ -87,6 +89,18 @@ export default function Academy() {
   
   const [showDossierDialog, setShowDossierDialog] = useState(false);
   const [showSignupDialog, setShowSignupDialog] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("hola.labnolab@gmail.com");
+      toast({
+        title: "¡Dirección de mail copiada!",
+        description: "Pégalo en tu plataforma de mailing y escríbenos lo que quieras 😉",
+      });
+    } catch (err) {
+      console.error("Error al copiar:", err);
+    }
+  };
 
 
   return (
@@ -180,21 +194,21 @@ export default function Academy() {
               </span>
               <span className="font-semibold underline underline-offset-4">+34615877069</span>
             </a>
-            <a href="mailto:hola.labnolab@gmail.com" className="flex items-center gap-4 p-6">
+            <button onClick={handleCopyEmail} className="flex items-center gap-4 p-6 text-left">
               <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">
-                <Smile className="size-5" />
+                <Mail className="size-5" />
               </span>
               <span className="font-semibold underline underline-offset-4">hola.labnolab@gmail.com</span>
-            </a>
+            </button>
             <a href="/" className="flex items-center gap-4 p-6">
               <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">
-                <Download className="size-5" />
+                <MapPin className="size-5" />
               </span>
               <span className="font-semibold underline underline-offset-4">Volver a Home</span>
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6">
+            <a href="https://www.linkedin.com/company/labnolab/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6">
               <span className="inline-flex size-10 items-center justify-center rounded-full bg-background text-foreground">
-                <Download className="size-5" />
+                <Linkedin className="size-5" />
               </span>
               <span className="font-semibold underline underline-offset-4">LabnoLab Page</span>
             </a>
