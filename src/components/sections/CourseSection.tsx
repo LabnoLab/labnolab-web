@@ -1,15 +1,13 @@
 // Image provided externally via /lovable-uploads
 import { Button } from "@/components/ui/button";
 import { Smile, MessageCircle, Download } from "lucide-react";
-
 export default function CourseSection() {
-  return (
-    <section id="course" className="border-t border-border bg-background py-14">
+  return <section id="course" className="border-t border-border bg-background py-14">
       <div className="grid grid-cols-1 gap-0 pad-x-fluid lg:grid-cols-2 lg:min-h-[85vh]">
         <div className="order-2 lg:order-1">
           <div className="mb-4 inline-flex items-center gap-3">
             <span className="inline-block h-6 w-8 bg-primary"></span>
-            <span className="text-sm font-extrabold italic tracking-wide">PRÓXIMO CURSO: SEP 2025</span>
+            <span className="text-sm font-extrabold italic tracking-wide">PRÓXIMO CURSO: DICIEMBRE 2025</span>
           </div>
           <h2 className="mb-6 font-extrabold leading-tight tracking-tight text-[clamp(2.25rem,5vw,5rem)]">
             EN CLAVE DE INTELIGENCIA ARTIFICIAL
@@ -27,6 +25,5 @@ export default function CourseSection() {
           <img src="/lovable-uploads/85bf3b27-094c-4788-9339-f0a29eff805c.png" alt="Smiley neon LabnoLab" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
