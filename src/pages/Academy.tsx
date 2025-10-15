@@ -25,7 +25,7 @@ export default function Academy() {
 
   const steps = useMemo(() => ([
     {
-      title: "Módulo 1: Pensar en clave de IA",
+      title: "Pensar en clave de IA",
       description: "En este módulo, aprenderás a pensar en clave de IA, transformando tu relación con la inteligencia artificial de herramienta a colaboradora estratégica.",
       points: [
         "**Fundamentos:** Comprenderás qué es realmente la IA Generativa, los LLMs y los modelos agénticos, y cómo cada uno se adapta a diferentes necesidades creativas y profesionales.",
@@ -34,7 +34,7 @@ export default function Academy() {
       ],
     },
     {
-      title: "Módulo 2: Interactuar en clave de IA",
+      title: "Interactuar en clave de IA",
       description: "En este módulo, tus conversaciones con la IA pasarán de funcionales a extraordinarias. Aprenderás las técnicas de Impact Prompt Engineering de LabnoLab para crear outputs que realmente impactan.",
       points: [
         "**Técnicas avanzadas:** Dominarás técnicas como Inmersión Narrativa, Desconexión de Familiaridad o Inversión de Perspectiva para obligar a la IA a pensar diferente y generar resultados innovadores, sensibles y profundamente humanos.",
@@ -43,7 +43,7 @@ export default function Academy() {
       ],
     },
     {
-      title: "Módulo 3: Investigar en clave de IA",
+      title: "Investigar en clave de IA",
       description: "En este módulo, convertirás la curiosidad en insights accionables, dominando los diferentes niveles de investigación con IA desde búsquedas básicas hasta agentes investigadores autónomos.",
       points: [
         "**Niveles de investigación:** Comprenderás las diferencias críticas entre buscadores tradicionales, LLMs con búsqueda web, modelos de Deep Research y agentes investigadores autónomos, sabiendo cuándo usar cada uno.",
@@ -52,7 +52,7 @@ export default function Academy() {
       ],
     },
     {
-      title: "Módulo 4: Innovar en clave de IA",
+      title: "Innovar en clave de IA",
       description: "Este módulo transforma cómo diseñas procesos completos, creando equipos virtuales especializados y workflows que operan como sistemas profesionales integrados.",
       points: [
         "**Equipos de asistentes en cascada:** Crearás equipos multi-perfil (estratega, creativa, copywriter, diseñadora, desarrolladora) donde cada asistente domina su especialidad y el output de uno alimenta al siguiente, replicando la profundidad de equipos profesionales reales.",
@@ -61,7 +61,7 @@ export default function Academy() {
       ],
     },
     {
-      title: "Módulo 5: Comunicar en clave de IA",
+      title: "Comunicar en clave de IA",
       description: "En este módulo, dominarás la creación de contenido visual y audiovisual con IA, desde el prompting técnico hasta el montaje final, construyendo narrativas visuales profesionales y cohesivas.",
       points: [
         "**Prompting audiovisual especializado:** Aprenderás que los prompts de imagen y vídeo son radicalmente diferentes al texto, requiriendo vocabulario cinematográfico, parámetros técnicos precisos y, para vídeo, estructuras complejas en formato formatos como JSON.",
@@ -70,7 +70,7 @@ export default function Academy() {
       ],
     },
     {
-      title: "Módulo 6: Materializar en clave de IA",
+      title: "Materializar en clave de IA",
       description: "Este módulo final integra todo lo aprendido, transformando estrategia, contenido y diseño en plataformas digitales funcionales donde cada elemento cobra vida operativa.",
       points: [
         "**Vibe coding:** Aprenderás a describir la esencia, estética y funcionalidad deseada de una plataforma (landing page, e-commerce, aplicación) y que la IA la materialice técnicamente con Lovable, convirtiendo conceptos en código operativo.",
