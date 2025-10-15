@@ -21,7 +21,7 @@ export default function CourseSection() {
           </p>
           <div className="flex max-w-none flex-col gap-4">
             <Button size="lg" className="hover-scale btn-fluid w-full"><Smile /> APÚNTATE</Button>
-            <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer" className="w-full"><Button size="lg" className="hover-scale btn-fluid w-full"><MessageCircle /> CONTÁCTANOS</Button></a>
+            <a href="https://wa.me/34615877069/?text=Hola equipo *LabnoLab*! 😎 Estaba navegando por vuestra web y quería pediros el dosier del curso, me lo compartís? Me llamo" target="_blank" rel="noopener noreferrer" className="w-full"><Button size="lg" className="hover-scale btn-fluid w-full"><MessageCircle /> CONTÁCTANOS</Button></a>
             <Button size="lg" className="hover-scale btn-fluid w-full" onClick={() => setShowDialog(true)}><Download /> DESCARGA EL DOSIER</Button>
           </div>
         </div>
