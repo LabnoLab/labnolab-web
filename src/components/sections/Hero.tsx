@@ -1,28 +1,16 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-
-const sliderImages = [
-  "/lovable-uploads/d956b2b7-faab-4326-a179-00dc413bc5b4.png",
-  "/lovable-uploads/c4b0b97b-2051-48e4-94aa-14a873e66725.png",
-  "/lovable-uploads/84b3ab41-31ab-4142-8c7b-6a5e008cf84e.png",
-  "/lovable-uploads/6302b291-05e3-435f-8e1a-82ddee386fcd.png",
-  "/lovable-uploads/13385a4c-e0f0-4a25-80cd-111455f08308.png",
-  "/lovable-uploads/df481572-cba7-432b-bd42-53ac80ae2537.png",
-];
-
+const sliderImages = ["/lovable-uploads/d956b2b7-faab-4326-a179-00dc413bc5b4.png", "/lovable-uploads/c4b0b97b-2051-48e4-94aa-14a873e66725.png", "/lovable-uploads/84b3ab41-31ab-4142-8c7b-6a5e008cf84e.png", "/lovable-uploads/6302b291-05e3-435f-8e1a-82ddee386fcd.png", "/lovable-uploads/13385a4c-e0f0-4a25-80cd-111455f08308.png", "/lovable-uploads/df481572-cba7-432b-bd42-53ac80ae2537.png"];
 export default function Hero() {
   const [index, setIndex] = useState(0);
-
   useEffect(() => {
     const id = setInterval(() => {
-      setIndex((i) => (i + 1) % sliderImages.length);
+      setIndex(i => (i + 1) % sliderImages.length);
     }, 3500);
     return () => clearInterval(id);
   }, []);
-
-  return (
-    <section id="home" className="bg-background isolate">
+  return <section id="home" className="bg-background isolate">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
         {/* Left: text + CTAs */}
         <div className="flex items-center min-w-0">
@@ -32,9 +20,9 @@ export default function Hero() {
               <h1 className="mb-6 font-extrabold leading-[0.95] tracking-tight fluid-h1 break-words">
                 LABORATORIO DE INTELIGENCIA CREATIVA
               </h1>
-              <p className="mb-10 leading-relaxed text-foreground/90 fluid-body">
-                Eficiencia, productividad y automatización son solo el resultado de colaborar con la Inteligencia Artificial para potenciar a las personas, la creatividad y el impacto.
-              </p>
+              <p className="mb-10 leading-relaxed text-foreground/90 fluid-body">Eficiencia, productividad y automatización son solo el resultado de colaborar con la Inteligencia Artificial para potenciar a las personas, la creatividad y el impacto.
+
+“Porque la IA no es un atajo, es una nueva forma de pensar” </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#servicios">
                   <Button size="lg" className="hover-scale btn-fluid">
@@ -53,28 +41,14 @@ export default function Hero() {
 
         {/* Right: full-height crossfade slider */}
         <div className="relative z-0 min-h-screen overflow-hidden">
-          {sliderImages.map((src, i) => (
-            <img
-              key={src}
-              src={src}
-              alt="Actividades de LabnoLab"
-              loading={i === 0 ? "eager" : "lazy"}
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${i === index ? "opacity-100" : "opacity-0"}`}
-            />
-          ))}
+          {sliderImages.map((src, i) => <img key={src} src={src} alt="Actividades de LabnoLab" loading={i === 0 ? "eager" : "lazy"} className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${i === index ? "opacity-100" : "opacity-0"}`} />)}
 
 
           {/* Dots */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {sliderImages.map((_, i) => (
-              <span
-                key={i}
-                className={`h-2 w-2 rounded-full transition-opacity ${i === index ? "bg-primary-foreground opacity-100" : "bg-primary-foreground/60 opacity-60"}`}
-              />
-            ))}
+            {sliderImages.map((_, i) => <span key={i} className={`h-2 w-2 rounded-full transition-opacity ${i === index ? "bg-primary-foreground opacity-100" : "bg-primary-foreground/60 opacity-60"}`} />)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
