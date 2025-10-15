@@ -20,9 +20,11 @@ export default function Hero() {
               <h1 className="mb-6 font-extrabold leading-[0.95] tracking-tight fluid-h1 break-words">
                 LABORATORIO DE INTELIGENCIA CREATIVA
               </h1>
-              <p className="mb-10 leading-relaxed text-foreground/90 fluid-body">Eficiencia, productividad y automatización son solo el resultado de colaborar con la Inteligencia Artificial para potenciar a las personas, la creatividad y el impacto.
-
-“Porque la IA no es un atajo, es una nueva forma de pensar” </p>
+              <p className="mb-10 leading-relaxed text-foreground/90 fluid-body">
+                Eficiencia, productividad y automatización son solo el resultado de colaborar con la Inteligencia Artificial para potenciar a las personas, la creatividad y el impacto.
+                <br /><br />
+                <strong>"Porque la IA no es un atajo, es una nueva forma de pensar"</strong>
+              </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#servicios">
                   <Button size="lg" className="hover-scale btn-fluid">
