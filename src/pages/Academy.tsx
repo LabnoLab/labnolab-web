@@ -1,6 +1,5 @@
 import Header from "@/components/layout/Header";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Smile, MessageCircle, Download } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -21,86 +20,66 @@ function useCountdown(target: Date) {
 
 export default function Academy() {
   useEffect(() => { document.title = "Academy | LabnoLab"; }, []);
-  const target = useMemo(() => new Date("2025-09-09T19:00:00"), []);
+  const target = useMemo(() => new Date("2025-12-02T19:00:00"), []);
   const t = useCountdown(target);
 
   const steps = useMemo(() => ([
     {
-      title: "Pensar",
-      description:
-        "Construye los fundamentos mentales para colaborar inteligentemente con la IA. Evalúa críticamente qué herramientas usar y cómo utilizarlas para pensar mejor.",
-      theme: "light" as const,
-      faqs: [
-        "¿Está la IA aquí para reemplazarnos o para potenciarnos?",
-        "¿Por qué Claude me da respuestas diferentes a ChatGPT?",
-        "¿Es realmente segura la IA? ¿Es sostenible?",
-        "¿Cómo puede destacar cuando 'todo el mundo' usa IA?",
+      title: "Módulo 1: Pensar en clave de IA",
+      description: "En este módulo, aprenderás a pensar en clave de IA, transformando tu relación con la inteligencia artificial de herramienta a colaboradora estratégica.",
+      points: [
+        "**Fundamentos:** Comprenderás qué es realmente la IA Generativa, los LLMs y los modelos agénticos, y cómo cada uno se adapta a diferentes necesidades creativas y profesionales.",
+        "**Arquitectura de datos:** Descubrirás por qué la organización de tu información es el 50% del éxito con IA. Aprenderás a estructurar tu conocimiento para que la IA acceda exactamente a lo que necesita, cuando lo necesita.",
+        "**Decisión estratégica:** Dominarás los diferentes niveles de adopción de IA (desde búsquedas simples hasta agentes autónomos) para elegir la herramienta exacta según si tu tarea es puntual, recurrente o requiere autonomía completa.",
       ],
     },
     {
-      title: "Interactuar",
-      description:
-        "Domina el arte de comunicarte efectivamente con sistemas de IA. Conversaciones productivas, resultados consistentes y personalización de outputs.",
-      theme: "dark" as const,
-      faqs: [
-        "¿Cómo puedo conseguir resultados consistentes?",
-        "¿Existe una forma 'correcta' de hablar con la IA?",
-        "¿Cómo evito que me dé respuestas genéricas?",
-        "¿Puedo crear una biblioteca de prompts reutilizables?",
+      title: "Módulo 2: Interactuar en clave de IA",
+      description: "En este módulo, tus conversaciones con la IA pasarán de funcionales a extraordinarias. Aprenderás las técnicas de Impact Prompt Engineering de LabnoLab para crear outputs que realmente impactan.",
+      points: [
+        "**Técnicas avanzadas:** Dominarás técnicas como Inmersión Narrativa, Desconexión de Familiaridad o Inversión de Perspectiva para obligar a la IA a pensar diferente y generar resultados innovadores, sensibles y profundamente humanos.",
+        "**Estructura del prompt:** Crearás prompts profesionales que incluyen rol, contexto estratégico, instrucciones precisas, formato de output, ejemplos de calidad y criterios de evaluación, logrando control total sobre cada respuesta.",
+        "**Personalización avanzada:** Configurarás tu perfil personalizado en tu plataforma de IA, crearás shortcuts para agilizar tareas recurrentes, y diseñarás proyectos donde cada chat comparte memoria, construyendo conocimiento acumulativo en cada interacción.",
       ],
     },
     {
-      title: "Investigar",
-      description:
-        "Revoluciona tu forma de investigar combinando herramientas de IA con metodología crítica para construir sistemas de gestión de conocimiento.",
-      theme: "light" as const,
-      faqs: [
-        "¿Cómo puedo confiar en la información que me da la IA?",
-        "¿Cómo busco información específica?",
-        "¿Puedo organizar mi biblioteca informativa?",
-        "¿Puedo automatizar mi investigación?",
+      title: "Módulo 3: Investigar en clave de IA",
+      description: "En este módulo, convertirás la curiosidad en insights accionables, dominando los diferentes niveles de investigación con IA desde búsquedas básicas hasta agentes investigadores autónomos.",
+      points: [
+        "**Niveles de investigación:** Comprenderás las diferencias críticas entre buscadores tradicionales, LLMs con búsqueda web, modelos de Deep Research y agentes investigadores autónomos, sabiendo cuándo usar cada uno.",
+        "**Deep research agéntico:** Utilizarás Deep Research para investigaciones que requieren razonamiento complejo y seguimiento de múltiples hilos informativos, y Tareas programadas y Navegadores agénticos para investigaciones programadas y navegación web autónoma.",
+        "**Procesamiento y transformación:** Dominarás herramientas como NotebookLM para procesar grandes volúmenes de información específica y transformarla en formatos compartibles (podcasts, mapas mentales, informes), y aprenderás a usar otras plataformas como tu biblioteca digital permanente que alimenta todos tus proyectos.",
       ],
     },
     {
-      title: "Innovar",
-      description:
-        "Materializa ideas creando asistentes y herramientas personalizadas de IA que se adapten a tus necesidades específicas.",
-      theme: "dark" as const,
-      faqs: [
-        "¿Puedo realmente tener mi propio equipo virtual de GPTs?",
-        "¿Cómo automatizo las tareas repetitivas?",
-        "¿Puedo crear prototipos profesionales sin saber programación?",
-        "¿Cómo organizo toda mi información?",
+      title: "Módulo 4: Innovar en clave de IA",
+      description: "Este módulo transforma cómo diseñas procesos completos, creando equipos virtuales especializados y workflows que operan como sistemas profesionales integrados.",
+      points: [
+        "**Equipos de asistentes en cascada:** Crearás equipos multi-perfil (estratega, creativa, copywriter, diseñadora, desarrolladora) donde cada asistente domina su especialidad y el output de uno alimenta al siguiente, replicando la profundidad de equipos profesionales reales.",
+        "**Diseño de flows metodológicos:** Aprenderás a diseñar flujos de trabajo completos donde diferentes herramientas y asistentes se encadenan estratégicamente, desde la investigación inicial hasta el producto final, manteniendo coherencia narrativa y visual en todo el proceso.",
+        "**De personas a productos:** Descubrirás por qué establecer primero la identidad humana y visual de un proyecto (las personas que lo representan) antes que los productos o elementos técnicos, crearás universos coherentes donde cada pieza dialoga naturalmente con las demás.",
       ],
     },
     {
-      title: "Comunicar",
-      description:
-        "Conecta auténticamente con diferentes audiencias usando la IA como amplificador de tu mensaje personal, manteniendo la esencia humana.",
-      theme: "light" as const,
-      faqs: [
-        "¿Puedo crear contenido auténtico sin perder horas en ello?",
-        "¿Cómo personalizo la comunicación efectivamente?",
-        "¿Cómo genero narrativas que realmente impacten?",
-        "¿Cómo paso de ideas a formatos múltiples?",
+      title: "Módulo 5: Comunicar en clave de IA",
+      description: "En este módulo, dominarás la creación de contenido visual y audiovisual con IA, desde el prompting técnico hasta el montaje final, construyendo narrativas visuales profesionales y cohesivas.",
+      points: [
+        "**Prompting audiovisual especializado:** Aprenderás que los prompts de imagen y vídeo son radicalmente diferentes al texto, requiriendo vocabulario cinematográfico, parámetros técnicos precisos y, para vídeo, estructuras complejas en formato formatos como JSON.",
+        "**Plataformas especializadas vs LLMs:** Comprenderás cuándo usar LLMs multimodales (Gemini, ChatGPT) por velocidad e integración, versus plataformas especializadas (Midjourney, Higgsfield, Weavy) cuando necesitas control granular, features específicas y máxima calidad.",
+        "**Ecosistemas de creación:** Descubrirás plataformas all-in-one como Higgsfield o Freepik que centralizan múltiples modelos vía API, y herramientas de automatización como Weavy para crear workflows completos de shooting que se ejecutan automáticamente, transformando horas de producción en minutos.",
       ],
     },
     {
-      title: "Analizar",
-      description:
-        "Desarrolla sistemas de evaluación que midan el rendimiento cuantitativo y el impacto cualitativo. Cierra el ciclo con mejora continua.",
-      theme: "dark" as const,
-      faqs: [
-        "¿Cómo puedo medir el verdadero impacto de mi trabajo?",
-        "¿Qué métricas necesito más allá de las tradicionales?",
-        "¿Cómo transformo datos en decisiones acertadas?",
-        "¿Cómo creo dashboards inteligentes?",
+      title: "Módulo 6: Materializar en clave de IA",
+      description: "Este módulo final integra todo lo aprendido, transformando estrategia, contenido y diseño en plataformas digitales funcionales donde cada elemento cobra vida operativa.",
+      points: [
+        "**Vibe coding:** Aprenderás a describir la esencia, estética y funcionalidad deseada de una plataforma (landing page, e-commerce, aplicación) y que la IA la materialice técnicamente con Lovable, convirtiendo conceptos en código operativo.",
+        "**Convergencia de outputs:** Comprenderás cómo hacer converger todos los elementos creados (estrategia, textos, identidad visual, fotografías de producto) en un ecosistema digital coherente donde cada pieza encuentra su lugar funcional.",
+        "**Iteración activa:** Adoptarás una metodología de mejora continua usando capturas de pantalla o lenguaje natural para señalar ajustes, permitiendo que la IA refine automáticamente el output hasta alcanzar la visión exacta que buscas, sin necesidad de conocimientos técnicos profundos.",
       ],
     },
   ]), []);
 
-  const [current, setCurrent] = useState(0);
-  const currentStep = steps[current];
 
   return (
     <div id="top">
@@ -113,7 +92,7 @@ export default function Academy() {
             Nuestra formación
             <br /> en Inteligencia Creativa
           </h1>
-          <p className="mt-6 text-lg font-extrabold uppercase tracking-wider">PRÓXIMO CURSO: SEP 2025</p>
+          <p className="mt-6 text-lg font-extrabold uppercase tracking-wider">PRÓXIMO CURSO: DIC 2025</p>
 
           <div className="mt-6 grid grid-flow-col gap-4 justify-center">
             <Time value={t.days} label="DAYS" />
@@ -121,71 +100,27 @@ export default function Academy() {
             <Time value={t.minutes} label="MINUTES" />
             <Time value={t.seconds} label="SECONDS" />
           </div>
-
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" className="btn-fluid shadow" variant="default"><Smile /> APÚNTATE</Button>
-            <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="btn-fluid shadow" variant="default"><MessageCircle /> CONTÁCTANOS</Button>
-            </a>
-            <Button size="lg" className="btn-fluid shadow" variant="default"><Download /> VER DOSIER</Button>
-          </div>
         </div>
       </section>
 
-      {/* METHODOLOGY WITH SIDE NAV */}
-      <section aria-label="Metodología LabnoLab" className="pad-x-fluid py-10 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
-          {/* Side nav */}
-          <aside className="lg:col-span-2">
-            <div className="sticky top-20 rounded-lg bg-primary p-3 text-primary-foreground shadow">
-              <p className="mb-3 px-1 text-xs font-bold uppercase tracking-wide">Metodología LabnoLab</p>
+      {/* METHODOLOGY MODULES */}
+      <section aria-label="Módulos del curso" className="pad-x-fluid py-8 lg:py-10">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {steps.map((step, idx) => (
+            <article key={step.title} className="rounded-lg border border-border bg-card p-6 shadow-sm">
+              <h2 className="text-lg font-extrabold tracking-tight mb-3">{step.title}</h2>
+              <p className="text-sm text-foreground/90 mb-4">
+                {step.description}
+              </p>
               <div className="space-y-3">
-                {steps.map((s, i) => (
-                  <button
-                    key={s.title}
-                    onClick={() => setCurrent(i)}
-                    className={
-                      "w-full rounded-lg border px-4 py-3 text-left font-semibold transition-colors " +
-                      (current === i
-                        ? "bg-background text-foreground"
-                        : "bg-primary text-primary-foreground hover:bg-secondary/10")
-                    }
-                  >
-                    <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full border font-bold">{i + 1}</span>
-                    {s.title}
-                  </button>
+                {step.points.map((point, i) => (
+                  <div key={i} className="rounded-md bg-secondary/30 p-3">
+                    <p className="text-sm text-foreground/85" dangerouslySetInnerHTML={{ __html: point.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                  </div>
                 ))}
               </div>
-            </div>
-          </aside>
-
-          {/* Step content */}
-          <article className={`lg:col-span-6 rounded-lg border p-8 ${currentStep.theme === "dark" ? "bg-primary text-primary-foreground" : "bg-accent text-accent-foreground"}`}>
-            <h2 className="text-[clamp(2rem,5vw,4rem)] font-extrabold tracking-tight">
-              {current + 1} | {currentStep.title}
-              <span className="block text-foreground/70 text-[clamp(1.25rem,3vw,2.25rem)] font-[800] tracking-tight">en clave de IA</span>
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed opacity-90">
-              {currentStep.description}
-            </p>
-          </article>
-
-          {/* FAQs */}
-          <div className="lg:col-span-4">
-            <h3 className="mb-3 text-xl font-extrabold">Preguntas clave que resolverás:</h3>
-            <div className="space-y-3">
-              <Accordion type="single" collapsible>
-                {currentStep.faqs.map((q, idx) => (
-                  <AccordionItem key={idx} value={`q-${idx}`} className="rounded-md border bg-secondary text-secondary-foreground">
-                    <AccordionTrigger className="px-4">{q}</AccordionTrigger>
-                    <AccordionContent className="px-4 pb-4">
-                      <p>Te mostraremos cómo resolverlo durante el módulo.</p>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
+            </article>
+          ))}
         </div>
       </section>
 
