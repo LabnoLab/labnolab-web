@@ -31,6 +31,11 @@ export default function Hero() {
                     ¿QUÉ HACEMOS?
                   </Button>
                 </a>
+                <a href="/academy">
+                  <Button size="lg" className="hover-scale btn-fluid" variant="default">
+                    PRÓXIMA FORMACIÓN
+                  </Button>
+                </a>
                 <a href="mailto:hola.labnolab@gmail.com">
                   <Button size="lg" className="hover-scale btn-fluid" variant="default">
                     <Mail /> PREGÚNTANOS
