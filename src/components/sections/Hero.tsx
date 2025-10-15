@@ -1,9 +1,33 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 const sliderImages = ["/lovable-uploads/d956b2b7-faab-4326-a179-00dc413bc5b4.png", "/lovable-uploads/c4b0b97b-2051-48e4-94aa-14a873e66725.png", "/lovable-uploads/84b3ab41-31ab-4142-8c7b-6a5e008cf84e.png", "/lovable-uploads/6302b291-05e3-435f-8e1a-82ddee386fcd.png", "/lovable-uploads/13385a4c-e0f0-4a25-80cd-111455f08308.png", "/lovable-uploads/df481572-cba7-432b-bd42-53ac80ae2537.png"];
 export default function Hero() {
   const [index, setIndex] = useState(0);
+  const [showContactDialog, setShowContactDialog] = useState(false);
+  const { toast } = useToast();
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("hola.labnolab@gmail.com");
+      toast({
+        title: "¡Dirección de mail copiada!",
+        description: "Pégalo en tu plataforma de mailing y escríbenos lo que quieras 😉",
+      });
+      setShowContactDialog(false);
+    } catch (err) {
+      console.error("Error al copiar:", err);
+    }
+  };
+
   useEffect(() => {
     const id = setInterval(() => {
       setIndex(i => (i + 1) % sliderImages.length);
@@ -36,11 +60,9 @@ export default function Hero() {
                     PRÓXIMA FORMACIÓN
                   </Button>
                 </a>
-                <a href="mailto:hola.labnolab@gmail.com">
-                  <Button size="lg" className="hover-scale btn-fluid" variant="default">
-                    <Mail /> PREGÚNTANOS
-                  </Button>
-                </a>
+                <Button size="lg" className="hover-scale btn-fluid" variant="default" onClick={() => setShowContactDialog(true)}>
+                  <Mail /> PREGÚNTANOS
+                </Button>
               </div>
             </div>
           </div>
@@ -57,5 +79,31 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <Dialog open={showContactDialog} onOpenChange={setShowContactDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>¿Cómo prefieres contactarnos?</DialogTitle>
+            <DialogDescription>
+              Elige tu método de contacto preferido
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col gap-3">
+            <Button size="lg" className="hover-scale w-full" onClick={handleCopyEmail}>
+              <Mail /> Contactar por Email
+            </Button>
+            <a 
+              href="https://wa.me/34615877069/?text=Hola equipo LabnoLab, estaba navegando vuestra web y quería contactaros para" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button size="lg" className="hover-scale w-full">
+                <MessageCircle /> Contactar por WhatsApp
+              </Button>
+            </a>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>;
 }
