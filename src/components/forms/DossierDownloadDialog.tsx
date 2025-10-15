@@ -63,8 +63,11 @@ export default function DossierDownloadDialog({ open, onOpenChange }: DossierDow
       if (error) throw error;
 
       toast.success("¡Gracias por tu interés!", {
-        description: "En breve recibirás el dossier en tu correo.",
+        description: "El dossier se abrirá en una nueva pestaña.",
       });
+
+      // Open the dossier link in a new tab
+      window.open("https://www.canva.com/design/DAGkUx9SHiw/_ArJAngHQjixmadWG5J8Cg/view?utm_content=DAGkUx9SHiw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he7303be4bb", "_blank", "noopener,noreferrer");
 
       form.reset();
       onOpenChange(false);
