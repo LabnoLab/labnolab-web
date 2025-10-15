@@ -4,7 +4,7 @@ import { Smile, MessageCircle, Download } from "lucide-react";
 export default function CourseSection() {
   return <section id="course" className="border-t border-border bg-background py-14">
       <div className="grid grid-cols-1 gap-0 pad-x-fluid lg:grid-cols-2 lg:min-h-[85vh]">
-        <div className="order-2 lg:order-1">
+        <div className="order-2 lg:order-1 pr-8 lg:pr-12">
           <div className="mb-4 inline-flex items-center gap-3">
             <span className="inline-block h-6 w-8 bg-primary"></span>
             <span className="text-sm font-extrabold italic tracking-wide">PRÓXIMO CURSO: DICIEMBRE 2025</span>
@@ -16,9 +16,9 @@ export default function CourseSection() {
             Por aquí somos fans de la pregunta, así que déjanos hacerte alguna: ¿Sientes que hay un enorme potencial en la IA, pero no sabes cómo aprovecharlo manteniendo tu identidad y propósito? ¿Te interesa no solo obtener respuestas, sino aprender a formular mejores preguntas? ¿Buscas diferenciarte en un mercado saturado donde todos usan la misma tecnología de la misma manera?
           </p>
           <div className="flex max-w-none flex-col gap-4">
-            <Button size="lg" className="hover-scale btn-fluid"><Smile /> APÚNTATE</Button>
-            <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer"><Button size="lg" className="hover-scale btn-fluid"><MessageCircle /> CONTÁCTANOS</Button></a>
-            <Button size="lg" className="hover-scale btn-fluid"><Download /> DESCARGA EL DOSIER</Button>
+            <Button size="lg" className="hover-scale btn-fluid w-full"><Smile /> APÚNTATE</Button>
+            <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer" className="w-full"><Button size="lg" className="hover-scale btn-fluid w-full"><MessageCircle /> CONTÁCTANOS</Button></a>
+            <Button size="lg" className="hover-scale btn-fluid w-full"><Download /> DESCARGA EL DOSIER</Button>
           </div>
         </div>
         <div className="order-1 lg:order-2 relative min-h-[45vh] lg:min-h-[85vh]">
