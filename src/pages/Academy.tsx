@@ -164,7 +164,7 @@ export default function Academy() {
           <a href="https://wa.me/34615877069/?text=Hola equipo *LabnoLab*! 😎 Estaba navegando por vuestra web y quería pediros el dosier del curso, me lo compartís? Me llamo" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="btn-fluid bg-accent text-accent-foreground hover:bg-accent/90"><MessageCircle /> CONTÁCTANOS</Button>
           </a>
-          <Button size="lg" className="btn-fluid bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setShowDossierDialog(true)}><Download /> VER DOSIER</Button>
+          <Button size="lg" className="btn-fluid bg-accent text-accent-foreground hover:bg-accent/90" onClick={() => setShowDossierDialog(true)}><Download /> DESCARGAR DOSSIER</Button>
         </div>
         
         <div className="mt-16 border-t border-white/20" />
