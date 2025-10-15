@@ -80,6 +80,9 @@ export default function Academy() {
     },
   ]), []);
 
+  const [current, setCurrent] = useState(0);
+  const currentStep = steps[current];
+
 
   return (
     <div id="top">
@@ -103,24 +106,47 @@ export default function Academy() {
         </div>
       </section>
 
-      {/* METHODOLOGY MODULES */}
-      <section aria-label="Módulos del curso" className="pad-x-fluid py-8 lg:py-10">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          {steps.map((step, idx) => (
-            <article key={step.title} className="rounded-lg border border-border bg-card p-6 shadow-sm">
-              <h2 className="text-lg font-extrabold tracking-tight mb-3">{step.title}</h2>
-              <p className="text-sm text-foreground/90 mb-4">
-                {step.description}
-              </p>
-              <div className="space-y-3">
-                {step.points.map((point, i) => (
-                  <div key={i} className="rounded-md bg-secondary/30 p-3">
-                    <p className="text-sm text-foreground/85" dangerouslySetInnerHTML={{ __html: point.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                  </div>
+      {/* METHODOLOGY MODULES - INTERACTIVE */}
+      <section aria-label="Módulos del curso" className="pad-x-fluid py-6">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+          {/* Side nav */}
+          <aside className="lg:col-span-3">
+            <div className="sticky top-20 rounded-lg bg-primary p-4 text-primary-foreground shadow">
+              <p className="mb-4 px-1 text-xs font-bold uppercase tracking-wide">Metodología del Curso</p>
+              <div className="space-y-2">
+                {steps.map((s, i) => (
+                  <button
+                    key={s.title}
+                    onClick={() => setCurrent(i)}
+                    className={
+                      "w-full rounded-lg border px-4 py-3 text-left text-sm font-semibold transition-colors " +
+                      (current === i
+                        ? "bg-background text-foreground"
+                        : "bg-primary text-primary-foreground hover:bg-background/10")
+                    }
+                  >
+                    <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full border text-xs font-bold">{i + 1}</span>
+                    {s.title}
+                  </button>
                 ))}
               </div>
-            </article>
-          ))}
+            </div>
+          </aside>
+
+          {/* Module content */}
+          <article className="lg:col-span-9 rounded-lg border border-border bg-card p-6 shadow-sm">
+            <h2 className="text-2xl font-extrabold tracking-tight mb-3">{currentStep.title}</h2>
+            <p className="text-base text-foreground/90 mb-6">
+              {currentStep.description}
+            </p>
+            <div className="space-y-3">
+              {currentStep.points.map((point, i) => (
+                <div key={i} className="rounded-md bg-secondary/30 p-4">
+                  <p className="text-sm text-foreground/85" dangerouslySetInnerHTML={{ __html: point.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                </div>
+              ))}
+            </div>
+          </article>
         </div>
       </section>
 
