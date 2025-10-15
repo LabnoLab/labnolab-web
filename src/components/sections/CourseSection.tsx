@@ -20,7 +20,7 @@ export default function CourseSection() {
           <p className="mb-10 max-w-4xl text-foreground/90 fluid-body">
             Por aquí somos fans de la pregunta, así que déjanos hacerte alguna: ¿Sientes que la IA tiene potencial infinito pero acabas usándola siempre para lo mismo? ¿Te frustra no saber cuándo usar cada herramienta o cómo hacer que todo tenga coherencia? ¿Quieres dejar de copiar prompts de internet y empezar a crear tu propio sistema de trabajo?
             <br /><br />
-            <strong>Este curso te enseña a pensar en clave de IA:</strong> a crear tu propia metodología de trabajo, diseñar flows que conectan herramientas estratégicamente, construir equipos de asistentes especializados, y materializar proyectos desde la investigación hasta plataformas funcionales. Porque dominar la IA no es saber prompts, es arquitecturar tu forma de trabajar.
+            Este curso te enseña a pensar en clave de IA: a crear tu propia metodología de trabajo, diseñar flows que conectan herramientas estratégicamente, construir equipos de asistentes especializados, y materializar proyectos desde la investigación hasta plataformas funcionales.
           </p>
           <div className="flex max-w-none flex-col gap-4">
             <Button size="lg" className="hover-scale btn-fluid w-full" onClick={() => setShowSignupDialog(true)}><Smile /> APÚNTATE</Button>
