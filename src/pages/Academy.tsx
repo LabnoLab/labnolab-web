@@ -89,7 +89,7 @@ export default function Academy() {
       <Header />
 
       {/* HERO COUNTDOWN */}
-      <section className="min-h-[70vh] grid place-items-center text-center">
+      <section className="py-10 grid place-items-center text-center">
         <div className="pad-x-fluid">
           <h1 className="fluid-h1 font-extrabold leading-[0.9] tracking-tight">
             Nuestra formación
