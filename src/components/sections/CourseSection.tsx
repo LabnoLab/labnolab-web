@@ -1,7 +1,11 @@
 // Image provided externally via /lovable-uploads
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Smile, MessageCircle, Download } from "lucide-react";
+import DossierDownloadDialog from "@/components/forms/DossierDownloadDialog";
+
 export default function CourseSection() {
+  const [showDialog, setShowDialog] = useState(false);
   return <section id="course" className="border-t border-border bg-background py-14">
       <div className="grid grid-cols-1 gap-0 pad-x-fluid lg:grid-cols-2 lg:min-h-[85vh]">
         <div className="order-2 lg:order-1 pr-8 lg:pr-12">
@@ -18,12 +22,13 @@ export default function CourseSection() {
           <div className="flex max-w-none flex-col gap-4">
             <Button size="lg" className="hover-scale btn-fluid w-full"><Smile /> APÚNTATE</Button>
             <a href="https://wa.me/34615877069" target="_blank" rel="noopener noreferrer" className="w-full"><Button size="lg" className="hover-scale btn-fluid w-full"><MessageCircle /> CONTÁCTANOS</Button></a>
-            <Button size="lg" className="hover-scale btn-fluid w-full"><Download /> DESCARGA EL DOSIER</Button>
+            <Button size="lg" className="hover-scale btn-fluid w-full" onClick={() => setShowDialog(true)}><Download /> DESCARGA EL DOSIER</Button>
           </div>
         </div>
         <div className="order-1 lg:order-2 relative min-h-[45vh] lg:min-h-[85vh]">
           <img src="/lovable-uploads/85bf3b27-094c-4788-9339-f0a29eff805c.png" alt="Smiley neon LabnoLab" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
+      <DossierDownloadDialog open={showDialog} onOpenChange={setShowDialog} />
     </section>;
 }
