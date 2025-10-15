@@ -3,9 +3,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Smile, MessageCircle, Download } from "lucide-react";
 import DossierDownloadDialog from "@/components/forms/DossierDownloadDialog";
+import CourseSignupDialog from "@/components/forms/CourseSignupDialog";
 
 export default function CourseSection() {
-  const [showDialog, setShowDialog] = useState(false);
+  const [showDossierDialog, setShowDossierDialog] = useState(false);
+  const [showSignupDialog, setShowSignupDialog] = useState(false);
   return <section id="course" className="border-t border-border bg-background py-14">
       <div className="grid grid-cols-1 gap-0 pad-x-fluid lg:grid-cols-2 lg:min-h-[85vh]">
         <div className="order-2 lg:order-1 pr-8 lg:pr-12">
@@ -20,15 +22,16 @@ export default function CourseSection() {
             Por aquí somos fans de la pregunta, así que déjanos hacerte alguna: ¿Sientes que hay un enorme potencial en la IA, pero no sabes cómo aprovecharlo manteniendo tu identidad y propósito? ¿Te interesa no solo obtener respuestas, sino aprender a formular mejores preguntas? ¿Buscas diferenciarte en un mercado saturado donde todos usan la misma tecnología de la misma manera?
           </p>
           <div className="flex max-w-none flex-col gap-4">
-            <Button size="lg" className="hover-scale btn-fluid w-full"><Smile /> APÚNTATE</Button>
+            <Button size="lg" className="hover-scale btn-fluid w-full" onClick={() => setShowSignupDialog(true)}><Smile /> APÚNTATE</Button>
             <a href="https://wa.me/34615877069/?text=Hola equipo *LabnoLab*! 😎 Estaba navegando por vuestra web y quería pediros el dosier del curso, me lo compartís? Me llamo" target="_blank" rel="noopener noreferrer" className="w-full"><Button size="lg" className="hover-scale btn-fluid w-full"><MessageCircle /> CONTÁCTANOS</Button></a>
-            <Button size="lg" className="hover-scale btn-fluid w-full" onClick={() => setShowDialog(true)}><Download /> DESCARGA EL DOSIER</Button>
+            <Button size="lg" className="hover-scale btn-fluid w-full" onClick={() => setShowDossierDialog(true)}><Download /> DESCARGA EL DOSIER</Button>
           </div>
         </div>
         <div className="order-1 lg:order-2 relative min-h-[45vh] lg:min-h-[85vh]">
           <img src="/lovable-uploads/85bf3b27-094c-4788-9339-f0a29eff805c.png" alt="Smiley neon LabnoLab" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
-      <DossierDownloadDialog open={showDialog} onOpenChange={setShowDialog} />
+      <DossierDownloadDialog open={showDossierDialog} onOpenChange={setShowDossierDialog} />
+      <CourseSignupDialog open={showSignupDialog} onOpenChange={setShowSignupDialog} />
     </section>;
 }
