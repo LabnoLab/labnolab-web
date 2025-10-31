@@ -63,11 +63,16 @@ export default function DossierDownloadDialog({ open, onOpenChange }: DossierDow
       if (error) throw error;
 
       toast.success("¡Gracias por tu interés!", {
-        description: "El dossier se abrirá en una nueva pestaña.",
+        description: "El dossier se descargará automáticamente.",
       });
 
-      // Open the dossier link in a new tab
-      window.open("https://www.canva.com/design/DAGkUx9SHiw/_ArJAngHQjixmadWG5J8Cg/view?utm_content=DAGkUx9SHiw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he7303be4bb", "_blank", "noopener,noreferrer");
+      // Download the dossier PDF
+      const link = document.createElement('a');
+      link.href = '/dossier-curso-ia.pdf';
+      link.download = 'Dossier-En-Clave-de-IA-LabnoLab.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 
       form.reset();
       onOpenChange(false);
