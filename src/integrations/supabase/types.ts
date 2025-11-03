@@ -20,7 +20,8 @@ export type Database = {
           email: string
           id: string
           name: string
-          phone: string | null
+          phone: string
+          surname: string
           wants_whatsapp_info: boolean | null
         }
         Insert: {
@@ -28,7 +29,8 @@ export type Database = {
           email: string
           id?: string
           name: string
-          phone?: string | null
+          phone: string
+          surname?: string
           wants_whatsapp_info?: boolean | null
         }
         Update: {
@@ -36,7 +38,8 @@ export type Database = {
           email?: string
           id?: string
           name?: string
-          phone?: string | null
+          phone?: string
+          surname?: string
           wants_whatsapp_info?: boolean | null
         }
         Relationships: []

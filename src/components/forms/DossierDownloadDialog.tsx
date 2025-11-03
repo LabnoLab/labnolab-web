@@ -16,14 +16,18 @@ const formSchema = z.object({
     .trim()
     .min(2, { message: "El nombre debe tener al menos 2 caracteres" })
     .max(100, { message: "El nombre debe tener menos de 100 caracteres" }),
+  surname: z.string()
+    .trim()
+    .min(2, { message: "El apellido debe tener al menos 2 caracteres" })
+    .max(100, { message: "El apellido debe tener menos de 100 caracteres" }),
   email: z.string()
     .trim()
     .email({ message: "Por favor, introduce un email válido" })
     .max(255, { message: "El email debe tener menos de 255 caracteres" }),
   phone: z.string()
     .trim()
-    .max(20, { message: "El teléfono debe tener menos de 20 caracteres" })
-    .optional(),
+    .min(7, { message: "El teléfono debe tener al menos 7 caracteres" })
+    .max(20, { message: "El teléfono debe tener menos de 20 caracteres" }),
   wants_whatsapp_info: z.boolean().default(false),
 });
 
@@ -41,6 +45,7 @@ export default function DossierDownloadDialog({ open, onOpenChange }: DossierDow
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      surname: "",
       email: "",
       phone: "",
       wants_whatsapp_info: false,
@@ -55,8 +60,9 @@ export default function DossierDownloadDialog({ open, onOpenChange }: DossierDow
         .from("course_downloads")
         .insert({
           name: values.name,
+          surname: values.surname,
           email: values.email,
-          phone: values.phone || null,
+          phone: values.phone,
           wants_whatsapp_info: values.wants_whatsapp_info,
         });
 
@@ -117,6 +123,20 @@ export default function DossierDownloadDialog({ open, onOpenChange }: DossierDow
 
             <FormField
               control={form.control}
+              name="surname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Apellidos *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Tus apellidos" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
@@ -134,7 +154,7 @@ export default function DossierDownloadDialog({ open, onOpenChange }: DossierDow
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Teléfono (opcional)</FormLabel>
+                  <FormLabel>Teléfono móvil *</FormLabel>
                   <FormControl>
                     <Input type="tel" placeholder="+34 600 000 000" {...field} />
                   </FormControl>
