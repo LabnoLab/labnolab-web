@@ -28,8 +28,8 @@ export default function CourseSection() {
             <Button size="lg" className="hover-scale btn-fluid w-full" onClick={() => setShowDossierDialog(true)}><Download /> DESCARGA EL DOSIER</Button>
           </div>
         </div>
-        <div className="order-1 lg:order-2 relative min-h-[45vh] lg:min-h-[85vh]">
-          <img src="/lovable-uploads/85bf3b27-094c-4788-9339-f0a29eff805c.png" alt="Smiley neon LabnoLab" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="order-1 lg:order-2 relative min-h-[45vh] lg:min-h-[85vh] bg-black">
+          <img src="/lovable-uploads/85bf3b27-094c-4788-9339-f0a29eff805c.png" alt="Smiley neon LabnoLab" loading="lazy" className="absolute inset-0 h-full w-full object-contain p-8" />
         </div>
       </div>
       <DossierDownloadDialog open={showDossierDialog} onOpenChange={setShowDossierDialog} />
