@@ -24,7 +24,7 @@ function useCountdown(target: Date) {
 }
 
 export default function Academy() {
-  const target = useMemo(() => new Date("2025-12-02T19:00:00"), []);
+  const target = useMemo(() => new Date("2026-02-03T19:00:00"), []);
   const { days, hours, minutes, seconds, done } = useCountdown(target);
 
   const blocks = useMemo(
@@ -112,7 +112,7 @@ export default function Academy() {
             </div>
           </div>
           <p className="mt-2 text-sm/relaxed opacity-90">
-            Finaliza el 02/12/2025 a las 19:00 (hora local)
+            VOL.3 — Del martes 03/02 al 18/03 · 19:00-20:30h (ESP) · Online
           </p>
         </div>
       </div>

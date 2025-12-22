@@ -23,7 +23,7 @@ function useCountdown(target: Date) {
 
 export default function Academy() {
   useEffect(() => { document.title = "Academy | LabnoLab"; }, []);
-  const target = useMemo(() => new Date("2025-12-02T19:00:00"), []);
+  const target = useMemo(() => new Date("2026-02-03T19:00:00"), []);
   const t = useCountdown(target);
   const { toast } = useToast();
 
@@ -114,7 +114,7 @@ export default function Academy() {
             Nuestra formación
             <br /> en Inteligencia Creativa
           </h1>
-          <p className="mt-6 text-lg font-extrabold uppercase tracking-wider">PRÓXIMO CURSO: DIC 2025</p>
+          <p className="mt-6 text-lg font-extrabold uppercase tracking-wider">VOL.3 — DEL 03/02 AL 18/03 · MARTES 19:00-20:30H (ESP)</p>
 
           <div className="mt-6 grid grid-flow-col gap-4 justify-center">
             <Time value={t.days} label="DAYS" />
