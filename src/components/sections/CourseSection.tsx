@@ -12,7 +12,7 @@ export default function CourseSection() {
         <div className="order-2 lg:order-1 pr-8 lg:pr-12">
           <div className="mb-4 inline-flex items-center gap-3">
             <span className="inline-block h-6 w-8 bg-primary"></span>
-            <span className="text-sm font-extrabold italic tracking-wide">PRÓXIMO CURSO: VOL.3 — DEL 03/02 AL 18/03 · MARTES 19:00-20:30H (ESP)</span>
+            <span className="text-sm font-extrabold italic tracking-wide">PRÓXIMO CURSO: DEL 03 DE FEBRERO AL 18 DE MARZO</span>
           </div>
           <h2 className="mb-6 font-extrabold leading-tight tracking-tight text-[clamp(2.25rem,5vw,5rem)]">
             EN CLAVE DE INTELIGENCIA ARTIFICIAL
