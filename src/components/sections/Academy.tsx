@@ -112,7 +112,7 @@ export default function Academy() {
             </div>
           </div>
           <p className="mt-2 text-sm/relaxed opacity-90">
-            VOL.3 — Del martes 10/03 al 14/04 · 19:00-20:30h (ESP) · Online
+            VOL.3 — Del martes 10/03 al 14/04 · 19:00-21:00h (ESP) · Online
           </p>
         </div>
       </div>
