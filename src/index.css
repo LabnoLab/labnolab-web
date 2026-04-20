@@ -118,7 +118,7 @@
 /* Marquee banner */
 @layer utilities {
   .marquee { overflow: hidden; }
-  .marquee-track { display: inline-flex; white-space: nowrap; animation: marquee 22s linear infinite; }
+  .marquee-track { display: inline-flex; white-space: nowrap; animation: marquee 60s linear infinite; }
   .marquee-track.reverse { animation-direction: reverse; }
   /* Text on images: high contrast and subtle shadow */
   .text-on-image { color: hsl(var(--brand-white)); text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
