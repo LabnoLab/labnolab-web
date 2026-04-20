@@ -24,7 +24,7 @@ function useCountdown(target: Date) {
 }
 
 export default function Academy() {
-  const target = useMemo(() => new Date("2026-03-10T19:00:00"), []);
+  const target = useMemo(() => new Date("2026-09-09T19:00:00"), []);
   const { days, hours, minutes, seconds, done } = useCountdown(target);
 
   const blocks = useMemo(
@@ -112,7 +112,7 @@ export default function Academy() {
             </div>
           </div>
           <p className="mt-2 text-sm/relaxed opacity-90">
-            VOL.3 — Del martes 10/03 al 14/04 · 19:00-21:00h (ESP) · Online
+            VOL.3 — Del martes 09/09 al 14/10 · 19:00-21:00h (ESP) · Online
           </p>
         </div>
       </div>
