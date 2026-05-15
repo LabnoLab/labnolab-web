@@ -2,6 +2,3 @@ project_id = "mrzbfzvhrqmedichnehv"
 
 [functions.airtable-signup]
 verify_jwt = false
-
-[functions.airtable-debug]
-verify_jwt = false
