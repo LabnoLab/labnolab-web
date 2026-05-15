@@ -1,1 +1,4 @@
 project_id = "mrzbfzvhrqmedichnehv"
+
+[functions.airtable-signup]
+verify_jwt = false
