@@ -56,17 +56,18 @@ export default function DossierDownloadDialog({ open, onOpenChange }: DossierDow
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
-        .from("course_downloads")
-        .insert({
+      const { data, error } = await supabase.functions.invoke("airtable-signup", {
+        body: {
           name: values.name,
           surname: values.surname,
           email: values.email,
           phone: values.phone,
           wants_whatsapp_info: values.wants_whatsapp_info,
-        });
+        },
+      });
 
       if (error) throw error;
+      if (data && (data as any).success === false) throw new Error((data as any).error || "Error en Airtable");
 
       toast.success("¡Gracias por tu interés!", {
         description: "El dossier se descargará automáticamente.",
