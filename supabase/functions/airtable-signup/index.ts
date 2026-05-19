@@ -2,7 +2,7 @@ import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 import { z } from 'npm:zod@3.23.8';
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/airtable';
-const BASE_NAME = 'CRM Academy';
+const BASE_NAME = 'LnL - CRM academy';
 const TABLE_NAME = 'Personas';
 
 const BodySchema = z.object({
